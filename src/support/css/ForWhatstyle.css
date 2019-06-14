@@ -1,0 +1,13 @@
+.fw-container{
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    margin-top: 48px
+}
+/* .circle{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    border-radius: 100px;
+    margin: 20px
+} */

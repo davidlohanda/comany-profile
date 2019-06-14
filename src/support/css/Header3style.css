@@ -1,0 +1,16 @@
+.header3-container{
+    height: 10vh;
+}
+.logo-pict{
+    height: 65px;
+    width: 115px;
+    margin-top: 12px
+}
+
+@media screen and (max-width: 766px){
+    .logo-pict{
+        height: 57px;
+        width: 100px;
+        margin-top: 19px
+    }
+}

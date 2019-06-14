@@ -1,0 +1,215 @@
+.navbar-container{
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    padding: 7px;
+    z-index: 1;
+    transition : 0.25s;
+    background-color: #192a56;
+    margin-bottom: 48px
+}
+.navbar-container-scroll{
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    margin-bottom: 50px;
+    padding: 7px;
+    position: fixed;
+    top: 0;
+    background-color: #192a56;
+    z-index: 999;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    width : 100%;
+    /* opacity: 0.97; */
+}
+
+
+nav ul {
+    
+}
+nav ul li {
+    display: inline-block;
+    
+}
+nav ul li:not(:first-child) {
+    margin-left: 48px;
+}
+nav ul li:last-child {
+    margin-right: 78px;
+}
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+nav ul li a:hover{
+    color : #f4f4f4;
+    text-decoration: none
+}
+.link-active{
+    color: #cb001a
+}
+.text-hover::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    transition: width .3s;
+    margin : 0 auto;
+}
+.text-hover:hover::after{
+    width: 50%;
+    transition: width .3s;
+}
+@media screen and (max-width: 1200px){
+    nav ul li a{
+        font-size: 15px
+    }
+}
+@media screen and (max-width: 1100px) {
+    .navbar-container{
+        position: sticky;
+        padding: 20px
+    }
+    .navbar-container-scroll{
+        padding: 20px
+    }
+    nav ul li a:hover{
+        font-size: 18px;
+        color : #000
+    }
+    nav{
+        padding: 12px; 
+    }
+    .nav-wrapper {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          opacity: 0;
+          display: none
+    }
+    .nav-wrapper ul {
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+    .nav-wrapper ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    .nav-wrapper ul li:nth-child(1) a {
+        transition-delay: 0.2s;
+    }
+
+    .nav-wrapper ul li:nth-child(2) a {
+            transition-delay: 0.3s;
+    }
+
+    .nav-wrapper ul li:nth-child(3) a {
+            transition-delay: 0.4s;
+    }
+
+    .nav-wrapper ul li:nth-child(4) a {
+            transition-delay: 0.5s;
+    }
+
+    .nav-wrapper ul li:not(:first-child) {
+            margin-left: 0;
+    }
+
+    .nav-wrapper ul li a {
+            padding: 10px 24px;
+            opacity: 0;
+            color: #000;
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            transform: translateX(-20px);
+    }
+    .text-hover::after{
+        display: none
+    }
+    .nav-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: block;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            z-index: 9999;
+            border-radius: 50%;
+    }
+
+    .nav-btn i {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            margin-left: 14px;
+    }
+
+    .nav-btn i:nth-child(1) {
+            margin-top: 16px;
+    }
+
+    .nav-btn i:nth-child(2) {
+            margin-top: 4px;
+            opacity: 1;
+    }
+
+    .nav-btn i:nth-child(3) {
+            margin-top: 4px;
+    }
+    
+}
+
+#nav:checked + .nav-btn {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+    background: #000;
+    transition: all 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    opacity: 1;
+    display: block;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+}

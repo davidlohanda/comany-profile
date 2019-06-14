@@ -1,0 +1,28 @@
+.content-container{
+    background-color: #F4F4F4;
+    height: 400px;
+    font-family: 'Roboto', sans-serif;
+}
+.Home-content-container-addon{
+    height: 140px;
+    color: #F4F4F4;
+    background-image: url('../img/map.png');
+    background-size: contain;
+    opacity: 0.4; 
+}
+.container .content-title{
+    font-size: 25px;
+    color : #cb001a;
+}
+.container .content-title span{
+    font-weight: 700;
+}
+
+@media (max-width: 766px){
+    .Home-content-container-addon{
+        height: 120px;
+    }
+    .container .content-title{
+        font-size: 22px;
+    }
+}
